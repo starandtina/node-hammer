@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+var program = require('commander');
+var pkg = require('../package.json');
+var version = pkg.version;
+var logger = require('../lib/logger');
+var debug = require('debug')('PerfTest:HammerNode');
+var runner = require('../lib/runner');
+
+// CLI
+program
+  .version(version)
+  .usage('[options]')
+  .option('-j, --job-spec <job>', 'specify the specification for your jobs')
+  .option('-o, --output <output>', 'specify your output directory')
+  .parse(process.argv);
+
+// action
+var action = program.args.shift() || 'run';
+
+if (action === 'run') {
+  // todo: add env suuport
+  if (!program.jobSpec) {
+    logger.error('No yaml file of jobs found, specify via --job-file');
+    process.exit(1);
+  }
+
+  runner.init(program.jobSpec, program.output);
+}

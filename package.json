@@ -1,0 +1,49 @@
+{
+  "name": "starandtina",
+  "version": "0.0.1",
+  "description": "Benchmark tool for MSSQL Based on TPC-C",
+  "main": "./index.js",
+  "scripts": {
+    "start": "node --harmony ./bin/hammer -h",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "hammer": "./bin/hammer"
+  },
+  "keywords": [
+    "node",
+    "performance",
+    "test"
+  ],
+  "author": "Khalil Zhang <kandmforever@126.com>",
+  "engines": {
+    "node": ">=0.11.x",
+    "npm": "1"
+  },
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://github.com/evo-cloud/incubator/raw/master/LICENSE"
+  }],
+  "dependencies": {
+    "logan": "0.0.2",
+    "js-yaml": "~3.0.1",
+    "semver": "~2.2.1",
+    "underscore": "~1.5.2",
+    "co": "~3.0.2",
+    "debug": "~0.7.4",
+    "mssql": "~0.4.3",
+    "commander": "~2.1.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/starandtina/node-hammer"
+  },
+  "bugs": {
+    "url": "https://github.com/starandtina/node-hammer/issues"
+  },
+  "homepage": "https://github.com/starandtina/node-hammer"
+}

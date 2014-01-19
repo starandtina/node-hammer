@@ -1,0 +1,23 @@
+---
+config:
+    database:
+      server: 192.168.56.30
+      port: 1433
+      user: sa
+      password: password
+      pool:
+        min: 0
+        max: 1024
+        idleTimeoutMillis: 30000
+    duration: 3
+    rampup: 1
+jobs:
+    - name: TPCC_1_1_1
+      database_names: TPCC1_1
+      virtual_users: 1
+    - name: TPCC_2_1_1
+      database_names: TPCC1_1,TPCC1_2
+      virtual_users: 1
+    - name: TPCC_4_1_1
+      database_names: TPCC1_1,TPCC1_2,TPCC1_3,TPCC1_4
+      virtual_users: 1
