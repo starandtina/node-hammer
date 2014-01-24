@@ -15,7 +15,7 @@ program
   .version(version)
   .usage('[options]')
   .option('-j, --job-spec <job>', 'specify the specification for your jobs')
-  .option('-o, --output <output>', 'specify your output directory')
+  .option('-o, --output [output]', 'specify your output directory')
   .parse(process.argv);
 
 // action
@@ -28,5 +28,5 @@ if (action === 'run') {
     process.exit(1);
   }
 
-  runner.init(program.jobSpec, program.output);
+  runner.init(program.jobSpec, program.output || '.');
 }

@@ -20,10 +20,12 @@
     "node": ">=0.11.x",
     "npm": "1"
   },
-  "licenses": [{
-    "type": "MIT",
-    "url": "https://github.com/evo-cloud/incubator/raw/master/LICENSE"
-  }],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/evo-cloud/incubator/raw/master/LICENSE"
+    }
+  ],
   "dependencies": {
     "logan": "0.0.2",
     "js-yaml": "~3.0.1",
@@ -32,7 +34,8 @@
     "co": "~3.0.2",
     "debug": "~0.7.4",
     "mssql": "~0.4.3",
-    "commander": "~2.1.0"
+    "commander": "~2.1.0",
+    "co-mssql": "~0.1.0"
   },
   "directories": {
     "test": "test"
