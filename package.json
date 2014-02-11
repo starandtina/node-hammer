@@ -1,5 +1,5 @@
 {
-  "name": "starandtina",
+  "name": "node-hammer",
   "version": "0.1.0",
   "description": "Benchmark tool for MSSQL Based on TPC-C",
   "main": "./index.js",
